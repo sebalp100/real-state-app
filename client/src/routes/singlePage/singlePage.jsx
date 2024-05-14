@@ -19,7 +19,6 @@ function SinglePage() {
     }
 
     setSaved((prev) => !prev);
-
     try {
       await apiRequest.post('/users/save', { postId: post.id });
     } catch (err) {
@@ -150,7 +149,7 @@ function SinglePage() {
                 backgroundColor: saved ? '#fece51' : 'white',
               }}
             >
-              <img src="/save.png" alt="" />
+              <img src="/save.png" alt="saved" />
               {saved ? 'Place Saved' : 'Save the Place'}
             </button>
           </div>
